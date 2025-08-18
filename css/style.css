@@ -68,7 +68,7 @@ a:hover {
 
 main {
     padding: 1.5rem;
-    max-width: 1050px; /* Limit main content width */
+    max-width: 1160px; /* Limit main content width */
     width: 100%; /* Ensure main content takes full width within its container */
 }
 
