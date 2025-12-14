@@ -1,0 +1,108 @@
+html { font-size: 110%; }
+
+/* Overrides: teal theme and wider container */
+:root{
+  --global-theme-color: #0aa69a;
+  --global-hover-color: #0aa69a;
+  --global-paper-color: #111;
+  --global-paper-border-color: #111;
+}
+html[data-theme="dark"]{
+  --global-theme-color: #33bfb7;
+  --global-hover-color: #33bfb7;
+  --global-paper-color: #ffffff;
+  --global-paper-border-color: #ffffff;
+
+}
+/* Slightly wider main content */
+.container{
+  max-width: 850px;
+}
+
+/* Bordered paper link used for paper PDFs */
+.paper-link{
+  display: inline-block;
+  border: 1px solid var(--global-paper-border-color);
+  color: var(--global-paper-color);
+  padding: 0px 2px;
+  padding-top: 0px;
+  padding-bottom: 0.5px;
+  border-radius: 3px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-decoration: none;
+  font-size: 0.7rem;
+  margin-left: 1rem;
+}
+.paper-link:hover{
+  background-color: var(--global-theme-color);
+  color: var(--global-hover-text-color);
+}
+
+/* Ensure footer last-updated banner matches index styling */
+footer.sticky-bottom {
+  padding: 0.25rem 0 !important;
+  line-height: 1;
+}
+footer.sticky-bottom .container {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+footer.sticky-bottom p.last-updated-js,
+footer.sticky-bottom p.mt-1.text-muted {
+  margin: 0 !important;
+  font-size: 0.85rem !important;
+  color: #6c757d;
+}
+
+/* Add a small extra gap under the last-updated text */
+footer.sticky-bottom p.last-updated-js {
+  margin-bottom: 10px !important;
+}
+
+/* When active, make the footer float (fixed) at viewport bottom.
+   The class is toggled by JS: add `footer-fixed` to `footer.sticky-bottom`.
+   The body receives `footer-fixed-body` to reserve space so content isn't hidden. */
+.footer-fixed {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  background-color: transparent;
+  border-top: 1px solid var(--global-divider-color);
+}
+
+/* Reserve page space only when footer is fixed */
+body.footer-fixed-body {
+  padding-bottom: 64px !important;
+}
+
+/* Keep container inside footer compact and centered */
+footer.sticky-bottom .container{
+  padding-top: 6px !important;
+  padding-bottom: 10px !important;
+}
+
+/* Add a small consistent padding under main content so spacing to footer matches */
+.container .post,
+.post article {
+  padding-bottom: 1rem;
+}
+@media(min-width:576px){
+  .container .post,
+  .post article { padding-bottom: 1.25rem; }
+}
+
+/* Minimal left profile panel placed outside the main container */
+.left-profile{float:left;width:150px;margin-left:200px;margin-right:20px;margin-top:5rem;text-align:center}
+.left-profile .image.avatar img{width:130px;height:130px;border-radius:50%;display:block;margin:0 auto 0.5rem;object-fit:cover}
+.left-profile .contact h3{margin:0;font-size:1rem}
+.left-profile .contact p{margin:0;font-size:0.9rem;color:#666}
+@media(max-width:767.98px){.left-profile{float:none;width:auto;margin:0 auto 1rem}.left-profile .image.avatar img{width:110px;height:110px}}
+
+/* Section divider styling */
+.section-divider{border:0;height:1px;background:rgba(10,166,154,0.12);margin:2rem 0}
+html[data-theme="dark"] .section-divider{background:rgba(51,191,183,0.12)}
+
+/* Ensure the section following a divider doesn't add extra top margin */
+.section-divider + section{margin-top:0 !important}
