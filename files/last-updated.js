@@ -1,6 +1,6 @@
 (function(){
   // Edit the date below to change the banner across the site
-  var lastUpdated = 'December, 2025.';
+  var lastUpdated = 'April, 2026.';
   var text = 'Last updated on ' + lastUpdated;
   function insert() {
     var footer = document.querySelector('footer.sticky-bottom') || document.querySelector('footer');
