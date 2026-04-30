@@ -122,7 +122,7 @@
   } catch {}
 
   window.getStoredTheme = function getStoredTheme() {
-    return readThemeFromUrl() || readThemeFromLocalStorage() || readThemeFromCookie() || "light";
+    return readThemeFromUrl() || readThemeFromLocalStorage() || readThemeFromCookie() || "dark";
   };
 
   window.setTheme = function setTheme(theme) {
